@@ -1,0 +1,15 @@
+First Create Account in DockerHub
+
+Login into the DockerHub Account
+
+Create a Repository
+
+Now go to the Server
+
+Commit/Build the image
+
+Login to the DockerHub account from the Server: docker login
+
+Now push the image from server to DockerHub: docker push docker_hub_username/repo_name
+
+Done!!!

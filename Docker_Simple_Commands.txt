@@ -1,0 +1,43 @@
+To check images in a server: docker images
+
+To download image to Server: docker pull image_name
+
+To remove a image from the server: docker rmi image_name
+
+To remove all images from the server: docker rmi $(docker images)
+
+To create a container from image: docker run -itd --name new_container_name image_name # interactive terminal dettach
+
+To check all the running containers: docker ps
+
+To check latest three running containers: docker ps -n 3
+
+To check all containers: docker ps -a
+
+To check all the stopped containers: docker ps -a -f "status=exited" # f filter
+
+To Start the container: docker start container_name
+
+To Start the multiple containers: docker start container_1 container_2 container_3
+
+To Start all the containers: docker start $(docker ps -a)
+
+To Stop the container: docker stop container_name
+
+To Stop the multiple containers: docker stop container_1 container_2 container_3
+
+To Stop all the container: docker stop $(docker ps)
+
+To Kill the container: docker kill container_name
+
+To create a container with port: docker run -itd --name new_container_name -p host_port:container_port image_name
+
+To login to the Container: docker exec -it container_name/id bash
+
+To exit from the container: exit
+
+To remove container: docker rm container_name/id #Before the container should be stop
+
+To remove container forcefully: docker rm -f container_name/id
+
+To remove all containers forcefully: docker rm -f $(docker ps -a)

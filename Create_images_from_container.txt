@@ -1,0 +1,11 @@
+First download the base image: docker run -itd --name new_container_name -p host_port:container_port image_name # p publish
+
+To login into container: docker exec -it container_name bash
+
+Update anything required: I am just creating few files: touch a{1..3}
+
+Logging out from the container: exit
+
+Create new image from the existing container: docker commit existing_container_name/id new_image_name
+
+Create container from the new image: docker run -itd --name new_container_name -p host_port_unique:container_port new_image_name # p publish
